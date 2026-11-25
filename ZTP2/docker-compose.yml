@@ -7,7 +7,7 @@ services:
       - "5173:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - MongoDbSettings__ConnectionString=mongodb://localhost:27017
+      - ConnectionStrings__MongoDB=${MONGODB_URI:?Set MONGODB_URI}
       - MongoDbSettings__DatabaseName=ZtpLab1DevDb
       - MongoDbSettings__CollectionName=Notifications
 
